@@ -1,0 +1,46 @@
+<mat-icon aria-hidden="false" aria-label="material-icons-outlined" (click)="closemodal()"
+    style="cursor: pointer;opacity: 0.6;">highlight_off</mat-icon>
+
+<mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Ask Question">
+        <div class="tipbox">
+            <p>
+                <strong>
+                    how to you can get ans quickly how to you can get ans quickly.
+                </strong>
+            </p>
+            <div>
+                <ul>
+                    <li class="listed_items">Double Check your grammer and spellings</li>
+                    <li class="listed_items">Write a meaningful question</li>
+                    <li class="listed_items">Use Keywords</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <form [formGroup]="CreatePostForm" (ngSubmit)="SubmitPost()">
+                <mat-form-field>
+                    
+                    <mat-label>Set Privacy</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let types of shareTypes" (click)="getValue(types.shareUID)"
+                            [value]="types.shareUID">
+                            {{types.shareType}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Start to type your Question.</mat-label>
+                    <textarea matInput placeholder="Ex. What is the use of LPUQuora?"
+                        formControlName="PostName"></textarea>
+                </mat-form-field>
+                <div class="buttons">
+                    <button type="button" mat-flat-button color="warn" style="margin-right: 10px;">Cancel</button>
+                    <button type="submit" mat-flat-button color="primary">Post Question</button>
+                </div>
+            </form>
+        </div>
+    </mat-tab>
+    <!-- Next Tab -->
+    <mat-tab label="Create Post">Content 2</mat-tab>
+</mat-tab-group>

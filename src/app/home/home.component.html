@@ -1,0 +1,10 @@
+<div class="container">
+    <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="Questions" class="mat-tab-labelcontrol">
+            <app-posts></app-posts>
+        </mat-tab>
+        <mat-tab label="Posts" (click)="redirectfunction()">
+            <app-post-comp></app-post-comp>
+        </mat-tab>
+    </mat-tab-group>
+</div>

@@ -1,0 +1,119 @@
+<div>
+
+</div>
+
+
+<div class="example-card">
+    <h4>Welcome To LPUQuora</h4>
+    <p>Login or signin with</p>
+    <div class="social_login">
+        <div class="social_login_fbIcon">
+            <span>
+                <img src="https://i.pinimg.com/originals/00/c1/e4/00c1e412ef67f3bd673beb70fe234578.jpg"
+                    class="Service_Image" alt="">
+            </span>
+            <span style="color: blue;">
+                Facebook
+            </span>
+        </div>
+        <div class="social_login_googleIcon">
+            <span><img src="https://i.pinimg.com/originals/6f/3b/b7/6f3bb75ad8ce14ac597a232ebee8c4e8.jpg"
+                    class="Service_Image" alt="" srcset=""></span>
+            <span style="color:red">
+                Google
+            </span>
+        </div>
+    </div>
+    <div>
+        <div class="navbar_break">
+            <span style="opacity: 0.4;font-size: 13px;margin-top: 20px;position: relative;bottom: 12px;">
+                _________ Or _________
+            </span>
+        </div>
+        <div *ngIf="IsviewLoginPanel">
+            <form [formGroup]="loginForm" (ngSubmit)="ValidUser()">
+                <mat-form-field appearance="outline" style="width: 8cm;">
+                    <mat-label>Enter Email and phone number</mat-label>
+                    <input type="text" matInput formControlName="Value" placeholder="Placeholder">
+                    <mat-hint>Required</mat-hint>
+                </mat-form-field>
+                <br><br>
+                <div style="display: flex;justify-content: space-evenly;">
+                    <button mat-stroked-button color="accent" type="submit" style="margin-left: 20px;">Submit</button>
+                    <button mat-stroked-button color="accent" type="submit">Recover</button>
+                </div>
+            </form>
+        </div>
+
+        <div *ngIf="IsviewPasswordPanel">
+            <div style="display: flex;justify-content: space-between;">
+                <p style="font-size: 13px;">{{loginForm.value.Value}}</p>
+                <span style="color: #3b3bd5; font-size: 13px; cursor: pointer;" (click)="reset()">edit</span>
+            </div>
+            <form [formGroup]="loginForm" (ngSubmit)="PostLogin()">
+                <mat-form-field appearance="outline" style="width: 8cm;">
+                    <mat-label>Enter Password</mat-label>
+                    <input type="text" matInput formControlName="Key" placeholder="Placeholder">
+                    <mat-hint>Required</mat-hint>
+                </mat-form-field>
+                <br><br>
+                <div style="display: flex;justify-content: space-evenly;">
+                    <button mat-stroked-button color="accent" type="submit" style="margin-left: 20px;">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <div *ngIf="IsviewRegistrationPanel">
+            <p style="font-size: 12px;text-align: center;opacity: 0.6;">Please complete your profile </p>
+            <div style="display: flex;justify-content: space-between;">
+                <p style="font-size: 13px;">{{RegistrationForm.value.I1}}</p>
+                <span style="color: #3b3bd5; font-size: 13px; cursor: pointer;" (click)="reset()">edit</span>
+            </div>
+            <form [formGroup]="RegistrationForm" (ngSubmit)="SubmitUserDetails()">
+                <p>
+                    <mat-form-field appearance="legacy" style="width: 283px;">
+                        <mat-label>Enter Name</mat-label>
+                        <input type="text" formControlName="name" matInput>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="legacy" style="width: 283px;">
+                        <mat-label>Enter phone</mat-label>
+                        <input type="text" formControlName="phonenumber" matInput>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="legacy" style="width: 283px;">
+                        <mat-label>Enter password</mat-label>
+                        <input type="password" formControlName="I2" matInput>
+                    </mat-form-field>
+                </p>
+                <div style="display: flex;">
+                    <p style="position: relative; margin-right: 5px;">Gender: </p>
+                    <div>
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button style="position: relative; margin-right: 15px;" name="male" value="male" #myCheckbox (click)="gendertoggle('male')" >Male
+                            </mat-radio-button>
+                            <mat-radio-button name="female" value="female" (click)="gendertoggle('female')">Female</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+                <div style="display: flex;justify-content: space-evenly;">
+                    <button mat-stroked-button color="accent" type="submit" style="margin-left: 20px;">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<ng-template #Login>
+    <p>
+        Login
+    </p>
+</ng-template>
+<!-- 
+<ng-template #Register>
+    <p>
+        
+    </p>
+</ng-template> -->

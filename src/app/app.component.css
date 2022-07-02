@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&display=swap'); /* for websiteName*/
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap'); /* forinput */
+@import url('https://fonts.googleapis.com/css2?family=Carme&display=swap'); /*Login Or Cretae account*/
+
+*{
+    overflow: hidden;
+}
+._navbar {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+
+._Nav_Items {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+._content_list {
+    list-style: none;
+    display: inline-block;
+}
+
+._navbar_list {
+    /* background-color: rgb(46, 43, 43); */
+    background-color: #282828;
+}
+
+._navbar_list_ul {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+._navbar_list_ul li {
+    font-size: 14px;
+    color: white;
+    margin-left: 50px;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+._navbar_list_ul li:hover {
+    color: pink;
+}
+
+._navbar input {
+    outline: none;
+    width: 16cm;
+    text-align: center;
+    background-color: #b7b7b71c;
+    border-style: hidden;
+    border-radius: 50px;
+    position: relative;
+    left: 88px;
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+._navbar h4 {
+    position: relative;
+    left: 59px;
+    cursor: pointer;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+._navbar button {
+    position: relative;
+    left: 107px;
+    /* font-family: 'Reem Kufi', sans-serif; */
+ 
+}
+.mat-tab-labelcontrol{
+    left: 100px;
+    position: relative;
+}
+
+.container {
+    background-color: crimson;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.container .leftSideBar { 
+    background-color: chartreuse;
+  height: 54%;
+
+}
+
+.container .rightSideBar  {
+    background-color:darkmagenta ;
+      height: 54%;
+
+}
+.container .cententBar {
+    /* background-color: aqua; */
+    background-color: #fed9ff;
+  /* width: 600px; */
+  height: 54%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  /* padding: 20px; */
+}
