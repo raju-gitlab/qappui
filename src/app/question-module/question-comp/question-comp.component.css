@@ -1,0 +1,133 @@
+.component {
+    /* position: absolute; */
+    display: grid;
+    grid-template-columns: 20% 55% 25%;
+}
+
+.component .leftSidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    z-index: 200000;
+    left: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+.component .rightSidebar {
+    height: 100vh;
+}
+
+.component .contentbar {
+    height: 93vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    padding: 20px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.component .contentbar::-webkit-scrollbar {
+    width:50px;
+    display: none;
+}
+.component .contentbar::-webkit-scrollbar-track {
+    -webkit-box-shadow:inset 0 0 60px rgba(0,0,0,0.3); 
+    border-radius:5px;
+}
+.component .contentbar::-webkit-scrollbar-thumb {
+    border-radius:5px;
+    -webkit-box-shadow: inset 0 0 60px red; 
+}
+
+/*Card Code*/
+.example-card {
+    max-width: 73%;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(18%, 0px);
+}
+
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.botton_outline {
+    width: 100px;
+    background: #e8e8e85c;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button_group {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.line {
+    border-left: 1px solid black;
+    height: 50px;
+}
+
+/*End Card Code*/
+.lists {
+    margin-top: 5px;
+}
+.lists .unordered_list .list_items { 
+    margin-bottom: 15px;
+}
+.lists .unordered_list .list_items a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    top: -4px;
+    left: 6px;
+}
+.lists .unordered_list .list_items a:hover {
+    color: red;
+    position: relative;
+    top: -4px;
+    left: 5px;
+}
+.set_text_icon {
+    max-width: 24px;
+    height: 21px;
+    border-radius: 4px;
+    
+}
+.lists .aboutcontainer { 
+    position: relative;
+    top: 5px;
+}
+
+/*hover Animation section*/
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: hotpink;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: hotpink;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+/*End hover animation section*/

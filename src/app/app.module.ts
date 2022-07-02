@@ -12,13 +12,12 @@ import { LoginDialougeComponent } from './login-dialouge/login-dialouge.componen
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalsModule } from './Modals/modals.module';
 import { HomeComponent } from './home/home.component';
-import { QuestionCompComponent } from './question-comp/question-comp.component';
+import { QuestionCompComponent } from './question-module/question-comp/question-comp.component';
 import { CommonModule } from '@angular/common';
 import { HttpclientserviceService } from './Services/httpclientservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { TestComponent } from './test/test.component';
 import { PostCompComponent } from './post-module/post-comp/post-comp.component';
-import { PostsComponent } from './posts/posts.component';
 import { PostshomeComponent } from './post-module/postshome/postshome.component';
 
 @NgModule({
@@ -30,7 +29,6 @@ import { PostshomeComponent } from './post-module/postshome/postshome.component'
     QuestionCompComponent,
     TestComponent,
     PostCompComponent,
-    PostsComponent,
     PostshomeComponent
   ],
   imports: [
